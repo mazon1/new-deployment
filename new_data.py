@@ -53,8 +53,9 @@ df = user_input_features()
 st.subheader('User Input Parameters')
 st.write(df)
 
-st.subheader('Entire Dataset')
 student = pd.read_csv('dataset.csv')
+st.subheader('Entire Dataset')
+st.write(student)
 student.shape
 student.columns
 student.sample(4)
