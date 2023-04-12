@@ -5,7 +5,7 @@
 
 
 
-# <h1 align="center" id="heading"># Team Members: Sahijdeep Singh Aujla, Mehakpreet Kaur, Jashanpreet Kaur
+# <h1 align="center" id="heading">Team Members: Sahijdeep Singh Aujla, Mehakpreet Kaur, Jashanpreet Kaur
 </h1>
 
 
