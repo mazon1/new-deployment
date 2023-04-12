@@ -79,7 +79,7 @@ df = pd.DataFrame({
 
 X = student_df.iloc[:,0:13]
 y = student_df.iloc[:,-1]
-X
+#X
 X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=0.2)
 
 from sklearn.ensemble import RandomForestClassifier
@@ -119,9 +119,8 @@ prediction_probabilities = clf.predict_proba(X_test)
 #st.subheader('Class labels and their corresponding index number')
 #st.write(y)
 
-print('0 = dropout, 1 = Enrolled, 2 = Graduate')
-
 st.subheader('Prediction Probability')
+st.subheader('0 = dropout, 1 = Enrolled, 2 = Graduate')
 st.write(prediction_probabilities)
 
 #st.subheader('Prediction')
