@@ -30,14 +30,14 @@ def user_input_features():
   Scholarship_holder = st.sidebar.slider('Scholarship holder', 0, 1)
   Marital_Status = st.sidebar.slider('Marital_Status', 1,4,2)
   Gender=st.sidebar.slider('Gender', 0,1,0.5)
-  Age at enrollment=st.sidebar.slider('Age at enrollment', 18,55,36)
+  Age_at_enrollment=st.sidebar.slider('Age at enrollment', 18,55,36)
   International=st.sidebar.slider('International', 0,1,0.5)
 
   user_input_data = {'Tuition fees up to date': Tuition_fees_up_to_date,
                      'Scholarship holder': Scholarship_holder,
                      'Marital Status':Marital_Status,
                      'Gender':Gender,
-                     'Age':Age at enrollment,
+                     'Age':Age_at_enrollment,
                      'International':International}
 
   features = pd.DataFrame(user_input_data, index=[0])
