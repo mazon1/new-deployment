@@ -29,9 +29,9 @@ def user_input_features():
   Tuition_fees_up_to_date= st.sidebar.slider('Tuition fees up to date', 0, 1)
   Scholarship_holder = st.sidebar.slider('Scholarship holder', 0, 1)
   Marital_Status = st.sidebar.slider('Marital_Status', 1,4,2)
-  Gender=st.sidebar.slider('Gender', 0,1,0.5)
+  Gender=st.sidebar.slider('Gender', 0, 1)
   Age_at_enrollment=st.sidebar.slider('Age at enrollment', 18,55,36)
-  International=st.sidebar.slider('International', 0,1,0.5)
+  International=st.sidebar.slider('International', 0, 1)
 
   user_input_data = {'Tuition fees up to date': Tuition_fees_up_to_date,
                      'Scholarship holder': Scholarship_holder,
