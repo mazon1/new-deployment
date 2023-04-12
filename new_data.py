@@ -67,7 +67,8 @@ student['Target'] = student['Target'].map({
 #student.corr()['Target']
 
 student_df=student.drop(columns=['Nacionality','Displaced','Curricular units 1st sem (approved)','Curricular units 2nd sem (approved)','Curricular units 1st sem (grade)','Curricular units 2nd sem (grade)','Application mode','Application order','Course','Daytime/evening attendance','Previous qualification',"Mother's qualification","Father's qualification","Mother's occupation","Father's occupation",'Educational special needs','Debtor','Curricular units 1st sem (credited)','Curricular units 1st sem (enrolled)','Curricular units 1st sem (evaluations)','Curricular units 1st sem (without evaluations)','Curricular units 2nd sem (credited)','Curricular units 2nd sem (enrolled)','Curricular units 2nd sem (evaluations)','Curricular units 2nd sem (without evaluations)','Unemployment rate','Inflation rate','GDP','Target'],axis=1)
-student_df
+st.subheader('Dataset')
+st.student_df
 student_df = student.iloc[:,[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34]]
 x = student_df['Target'].value_counts().index
 y = student_df['Target'].value_counts().values
