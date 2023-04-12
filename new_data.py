@@ -72,10 +72,10 @@ student_df = student.iloc[:,[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,
 x = student_df['Target'].value_counts().index
 y = student_df['Target'].value_counts().values
 
-df = pd.DataFrame({
-    'Target': x,
-    'Count_T' : y
-})
+#df = pd.DataFrame({
+    #'Target': x,
+    #'Count_T' : y
+#})
 
 X = student_df.iloc[:,0:13]
 y = student_df.iloc[:,-1]
