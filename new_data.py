@@ -70,16 +70,16 @@ student_df=student.drop(columns=['Nacionality','Displaced','Curricular units 1st
 st.subheader('Dataset')
 st.write(student_df)
 #student_df = student.iloc[:,[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34]]
-x = student_df['Target'].value_counts().index
-y = student_df['Target'].value_counts().values
+#x = student_df['Target'].value_counts().index
+#y = student_df['Target'].value_counts().values
 
-df = pd.DataFrame({
-    'Target': x,
-    'Count_T' : y
-})
+#df = pd.DataFrame({
+  #  'Target': x,
+  #  'Count_T' : y
+#})
 
-X = student_df.iloc[:,0:6]
-y = student_df.iloc[:,-1]
+X = student_df
+y = student['Target']
 #X
 X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=0.2)
 
