@@ -114,8 +114,8 @@ print("Precision Score: ", precision_score(y_test, y_pred,average='macro'))
 print("Recall Score: ", recall_score(y_test, y_pred,average='macro'))
 print("F1 Score: ", f1_score(y_test, y_pred,average='macro'))
 
-prediction = clf.predict(X_test)
-prediction_probabilities = clf.predict_proba(X_test)
+prediction = clf.predict(df)
+prediction_probabilities = clf.predict_proba(df)
 
 #st.subheader('Class labels and their corresponding index number')
 #st.write(y)
