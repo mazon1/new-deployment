@@ -5,16 +5,17 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
-st.write(''' # Academic Success Prediction App''')
+st.title("Student Enrollment Prediction")
 
-st.sidebar.header('User Input Parameters')
+st.sidebar.header("Enter Student Data")
 
 def user_input_features():
+    dataset = pd.read_csv("dataset.csv")
     Tuition_fees_up_to_date = st.sidebar.slider('Tuition fees up to date', 0, 1)
     Scholarship_holder = st.sidebar.slider('Scholarship holder', 0, 1)
-    Marital_Status = st.sidebar.slider('Marital status', 1,4,2)
-    Gender = st.sidebar.slider('Gender', 0, 1)
-    Age_at_enrollment = st.sidebar.slider('Age at enrollment', 18,55,36)
+    Marital_Status = st.sidebar.selectbox("Marital status", dataset["Marital status"].unique())
+    Gender = st.sidebar.selectbox("Gender", dataset["Gender"].unique())
+    Age_at_enrollment = st.sidebar.slider('Age at enrollment', 18, 55, 36)
     International = st.sidebar.slider('International', 0, 1)
 
     user_input_data = {'Tuition fees up to date': Tuition_fees_up_to_date,
@@ -52,13 +53,21 @@ clf = RandomForestClassifier(max_depth=10, random_state=0)
 clf.fit(X_train, y_train)
 
 y_pred = clf.predict(X_test)
-st.write( accuracy_score(y_test, y_pred))
-
-# scores = cross_val_score(clf, X_train, y_train, cv=10)
-# print("With CV: ", scores.mean())
+st.write("Accuracy:", accuracy_score(y_test, y_pred))
 
 prediction = clf.predict(df)
 prediction_probabilities = clf.predict_proba(df)
+
+status = ''
+if prediction[0] == 0:
+    status = 'Dropout'
+elif prediction[0] == 1:
+    status = 'Enrolled'
+else:
+    status = 'Graduate'
+
+st.subheader('Prediction')
+st.write('The student is likely to', status)
 
 st.subheader('Prediction Probability')
 st.write(prediction_probabilities)
