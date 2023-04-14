@@ -52,7 +52,7 @@ clf = RandomForestClassifier(max_depth=10, random_state=0)
 clf.fit(X_train, y_train)
 
 y_pred = clf.predict(X_test)
-print( accuracy_score(y_test, y_pred))
+st.write( accuracy_score(y_test, y_pred))
 
 # scores = cross_val_score(clf, X_train, y_train, cv=10)
 # print("With CV: ", scores.mean())
