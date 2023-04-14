@@ -78,7 +78,7 @@ df = pd.DataFrame({
     'Count_T' : y
 })
 
-X = student_df.iloc[:,0:13]
+X = student_df.iloc[:,0:6]
 y = student_df.iloc[:,-1]
 #X
 X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=0.2)
